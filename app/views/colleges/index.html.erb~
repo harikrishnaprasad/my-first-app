@@ -1,0 +1,34 @@
+<div style="margin-left:25px; margin-right: 200px; line-height: 180%">
+<h1>List of colleges</h1>
+
+<table border=2>
+  <tr>
+    <th><%= sortable'College name' %></th>
+    <th><%= sortable 'Code' %></th>
+    <th><%= sortable 'Address' %></th>
+    <th><%= sortable 'Establish year' %></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+</div>
+<% @colleges.each do |college| %>
+  <tr>
+    <td><%= college.college_Name %></td>
+    <td><%= college.code %></td>
+    <td><%= college.address %></td>
+    <td><%= college.establish_Year %></td>
+    <td><%= link_to 'Show', college %></td>
+    <td><%= link_to 'Edit', edit_college_path(college) %></td>
+    <td><%= link_to 'Destroy', college, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+|<%= link_to 'New College', new_college_path %>|
+<%= link_to 'ImportFile', import_colleges_path %>|
+<%= link_to 'CSV_Export', export_csv_colleges_path %>|
+<%= link_to 'Export_xls', new_college_path %>|
+    <%= will_paginate @colleges %>

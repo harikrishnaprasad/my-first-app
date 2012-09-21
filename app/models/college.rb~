@@ -1,0 +1,11 @@
+class College < ActiveRecord::Base
+validates :college_Name, :code, :address, :establish_Year, :presence=>true
+validates :college_Name, :code, :address, :establish_Year,:length => { :minimum => 2 }
+validates :college_Name,:address,:length => { :maximum => 100 }
+validates :college_Name,:address,:uniqueness =>true
+def self.search(search, page)
+  paginate :per_page => 2, :page => page,
+           #:conditions => ['name like ?', "%#{search}%"],
+           #:order => 'name'
+
+end

@@ -1,0 +1,29 @@
+<h1>List of universities</h1>
+
+<table border=2>
+  <tr>
+    <th>Name of the university</th>
+    <th>Address</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @universities.each do |university| %>
+  <tr>
+    <td><%= university.name_of_the_university %></td>
+    <td><%= university.address %></td>
+    <td><%= link_to 'Show', university %></td>
+    <td><%= link_to 'Edit', edit_university_path(university) %></td>
+    <td><%= link_to 'Destroy', university, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+|<%= link_to 'New University', new_university_path %>|
+<%= link_to 'Import', import_universities_path %>|
+<%= link_to 'Export', new_college_path %>|
+<%= link_to 'Import_xls', import_xls_universities_path %>|
+<%= link_to 'Export_xls', new_college_path %>|

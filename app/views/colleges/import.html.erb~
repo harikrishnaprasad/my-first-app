@@ -1,0 +1,39 @@
+<% form_tag(csv_import_colleges_path, :method=>'post', :multipart => true) do %> 
+ <table>
+   <tr>
+     <td>
+      <label for="dump_file">
+        Select a CSV File  :
+      </label>
+     </td>
+     <td >
+      <%= file_field_tag :file %>
+     </td>
+   
+     <td colspan='1'>
+        <%= submit_tag "Upload", :disable_with => 'Uploading...' %>
+     </td>
+   </tr>
+ </table>
+<% end -%>
+
+
+<% form_tag(xls_import_colleges_path, :method=>'post', :multipart => true) do %> 
+ <table>
+   <tr>
+     <td>
+      <label for="dump_file">
+        Select a XLS File  :
+      </label>
+     </td>
+     <td >
+      <%= file_field_tag :file %>
+     </td>
+   </tr>
+   <tr>
+     <td colspan='1'>
+        <%= submit_tag "Upload", :disable_with => 'Uploading...' %>
+     </td>
+   </tr>
+ </table>
+<% end -%>

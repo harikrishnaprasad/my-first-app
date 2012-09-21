@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  college_Name: MyString
+  code: MyString
+  address: MyText
+  establish_Year: 
+
+two:
+  college_Name: MyString
+  code: MyString
+  address: MyText
+  establish_Year: 

@@ -1,0 +1,6 @@
+<div id="footer">
+    Powered by <a href="http://www.f5mobitech.com/" onclick="window.open(this.href);return false;">f5mobitech</a>
+    © 2011
+</div>
+</body>
+</html>

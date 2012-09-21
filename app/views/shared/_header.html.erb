@@ -1,0 +1,38 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <title>User-Admin-<%=controller_name.titleize %></title>
+        <%= javascript_include_tag 'prototype','application','rails','controls','effects','dragdrop' %>
+        <%= stylesheet_link_tag 'admin_screen' %>
+        <%= csrf_meta_tag %>
+        <script>
+            $(function(){
+                $("#accordion").accordion({
+                    collapsible: true,
+                    autoHeight: false,
+                    navigation: true
+                });
+            });
+
+        </script>
+
+    </head>
+    <body id="store">
+        <div id="header">
+            <div id="welcome">
+                Welcome,<span id="welcome_username"><%#=current_user.name %><%#=current_user.name %></span>
+                <span>!&nbsp;&nbsp;</span>
+                | <%#=link_to 'Profile',:controller=>"user_sessions",:action=>"new"%>
+                | <%#=link_to 'Logout',:controller=>'user_sessions',:action=>'destroy' %>
+            </div>
+
+            <h3><%=link_to 'UserInformation',new_college_path %>
+            </h3>
+
+        </div>
+        <div id="tabs">
+            <ul>
+                <%#= admin_tabs %>
+            </ul>
+        </div>
+
